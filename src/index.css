@@ -1,0 +1,106 @@
+/* Importar directivas de Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Reset y estilos base */
+@layer base {
+  * {
+    @apply box-border;
+  }
+  
+  body {
+    @apply m-0 p-0 font-sans antialiased bg-gray-50 text-gray-900;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+  
+  input, textarea, select {
+    @apply border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent;
+  }
+  
+  button {
+    @apply cursor-pointer transition-all duration-200;
+  }
+}
+
+/* Componentes personalizados */
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-lg font-medium transition-all duration-200;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-600 text-white hover:bg-primary-700 active:bg-primary-800;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-200 text-gray-800 hover:bg-gray-300 active:bg-gray-400;
+  }
+  
+  .btn-danger {
+    @apply bg-red-600 text-white hover:bg-red-700 active:bg-red-800;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-md p-6;
+  }
+  
+  .input-group {
+    @apply mb-4;
+  }
+  
+  .label {
+    @apply block text-sm font-medium text-gray-700 mb-1;
+  }
+  
+  .error-message {
+    @apply text-red-600 text-sm mt-1;
+  }
+  
+  .success-message {
+    @apply text-green-600 text-sm mt-1;
+  }
+}
+
+/* Estilos para React Calendar */
+.react-calendar {
+  @apply w-full border border-gray-300 rounded-lg bg-white shadow-sm;
+}
+
+.react-calendar__navigation {
+  @apply flex mb-4;
+}
+
+.react-calendar__navigation button {
+  @apply text-lg font-semibold text-gray-700 hover:bg-gray-100 rounded;
+}
+
+.react-calendar__month-view__weekdays {
+  @apply text-center font-bold text-sm text-gray-600;
+}
+
+.react-calendar__tile {
+  @apply p-3 text-center hover:bg-primary-50 rounded;
+}
+
+.react-calendar__tile--active {
+  @apply bg-primary-600 text-white;
+}
+
+.react-calendar__tile--now {
+  @apply bg-primary-100;
+}
+
+.react-calendar__tile--hasReservation {
+  @apply bg-yellow-100 border border-yellow-400;
+}
+
+/* Utilidades adicionales */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
